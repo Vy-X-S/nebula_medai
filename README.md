@@ -23,6 +23,15 @@ Welcome to the Nebula MedAI Hackathon! This starter code provides a pre-made Fas
 
 2. **Install Requirements**:
    - Ensure you have Python installed.
+   - Create a virtual environment
+     ```
+     python -m venv env
+     ```
+   - Activate virtual environment (Use appropriate activation script, provided is WSL/Linux):
+     ```
+     source env/bin/activate
+     ```
+     A (env) prefix should appear to indicate an activated virtual environment
    - Install the required packages using:
      ```
      pip install -r requirements.txt
