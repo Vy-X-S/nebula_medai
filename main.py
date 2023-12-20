@@ -53,7 +53,7 @@ async def call_openai_api(data: dict):
     ####
   
     # Establish API Key
-    api_key = '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'
+    api_key = 'YOUR OPENAI_KEY HERE'
     client = OpenAI(api_key=api_key)
 
     # Create a prompt from the request data
