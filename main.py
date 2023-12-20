@@ -53,7 +53,7 @@ async def call_openai_api(data: dict):
     ####
   
     # Establish API Key
-    api_key = 'YOUR OPENAI_KEY'
+    api_key = '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'
     client = OpenAI(api_key=api_key)
 
     # Create a prompt from the request data
@@ -92,18 +92,25 @@ async def create_treatment_proposal(request: TreatmentRequest):
     - It's essential to test the end-to-end functionality thoroughly, from receiving data to returning the PDF.
     """
     
-    # Processing the request and generating the OpenAI response
-    openai_response = ""#call_openai_api(DICT)  # Placeholder for OpenAI response
+    # Convert the request to a dictionary and call OpenAI API
+    request_data = request.dict()
+    openai_response = await call_openai_api(request_data)
 
-    # Convert the response to HTML
-    html_content = f"<html><body><p>{openai_response}</p></body></html>"
+    # Check if OpenAI response is valid
+    if not openai_response:
+        raise HTTPException(status_code=500, detail="Failed to generate response from OpenAI")
+    else:
+        return openai_response # Remove this for your solution
 
-    # Convert HTML to PDF
-    pdf_path = "path_to_save_pdf"
-    PDFKit.from_string(html_content, pdf_path)
+    ###### Convert the response to HTML and then to a PDF
+    ###### (Add your logic here for HTML conversion and PDF generation)
+    # html_content = f"<html><body><p>{openai_response}</p></body></html>"
+    # pdf_path = "path_to_your_pdf.pdf"
+    ###### (Use a library like PDFKit to convert html_content to a PDF stored at pdf_path)
 
-    # Return the PDF file as a response
-    return FileResponse(pdf_path, media_type='application/pdf', filename="treatment_proposal.pdf")
+    ###### Return the PDF file as a response
+    # return FileResponse(pdf_path, media_type='application/pdf', filename="treatment_proposal.pdf")
+
 
 if __name__ == "__main__":
     import uvicorn
