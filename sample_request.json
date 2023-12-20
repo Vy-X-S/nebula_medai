@@ -1,0 +1,20 @@
+{
+  "session_id": "123e4567-e89b-12d3-a456-426614174000",
+  "clinic_id": "CL-1001",
+  "user_id": "USR-5002",
+  "patient_id": "PAT-3021",
+  "patient_symptoms": [
+    {
+      "symptom_id": "SYM-001",
+      "symptom_name": "Fever"
+    },
+    {
+      "symptom_id": "SYM-002",
+      "symptom_name": "Cough"
+    }
+  ],
+  "doctor_id": "DR-2031",
+  "date": "2023-12-19",
+  "treatment": "Rest, increased fluid intake, and paracetamol for fever.",
+  "tx_id": "TX-1010"
+}
