@@ -93,7 +93,7 @@ async def create_treatment_proposal(request: TreatmentRequest):
     """
     
     # Processing the request and generating the OpenAI response
-    openai_response = #call_openai_api(DICT)  # Placeholder for OpenAI response
+    openai_response = ""#call_openai_api(DICT)  # Placeholder for OpenAI response
 
     # Convert the response to HTML
     html_content = f"<html><body><p>{openai_response}</p></body></html>"
