@@ -14,7 +14,7 @@ Welcome to the Nebula MedAI Hackathon! This starter code provides a pre-made Fas
    - Open your terminal.
    - Clone the repository using:
      ```
-     git clone https://github.com/Vy-X-S/Hackathons/nebula_medai.git
+     git clone https://github.com/Vy-X-S/nebula_medai.git
      ```
    - Navigate into the cloned repository:
      ```
